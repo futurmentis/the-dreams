@@ -23,7 +23,7 @@ Projekt je **uzavretý (2026-11-07)**: APK beží v mobile používateľa so sku
 | `design/vyrob-ikony.mjs` | Vyrobí ikonu a splash do `app/assets/images/`. |
 | `backup/` | Zálohy pred väčšími zmenami. |
 | `output/` | Hotové výstupy. |
-| GitHub | Účet `futurmentis`. Do gitu nikdy nepatria sny, súbory z `output/` ani APK. |
+| GitHub | https://github.com/futurmentis/the-dreams, vetva `main`. Do gitu nikdy nepatria sny, súbory z `output/` ani APK. Vetvu `archiv-povodna-historia` neposielať. |
 
 **Živý návrh:** https://claude.ai/artifact/PSR2JyENvAVHpCe26Efcxu
 
