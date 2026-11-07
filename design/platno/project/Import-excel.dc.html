@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<title>Import z Excelu</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#E2BD7A}a:hover{color:#ECE6D8}</style>
+</helmet>
+<main style="width: 390px; height: 844px; box-sizing: border-box; padding: 12px 20px 32px; background: #12141F; color: #ECE6D8; font-family: 'DM Sans', sans-serif; display: flex; flex-direction: column; gap: 10px">
+  <a href="Nastavenia.dc.html" aria-label="Späť na nastavenia" style="width: 48px; height: 48px; margin-left: -12px; display: flex; align-items: center; justify-content: center; color: #ECE6D8"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
+  <h1 style="margin: 0; font: 500 30px/36px Literata, serif">Import z Excelu</h1>
+  <p style="margin: 0 0 6px; font-size: 13px; line-height: 18px; color: #A9A595; overflow-wrap: anywhere">moje-sny.xlsx · 212 riadkov</p>
+  <label style="font-size: 13px; color: #A9A595" for="d">Stĺpec s dátumom</label>
+  <select id="d" style="height: 52px; box-sizing: border-box; border: 1px solid #2E3145; border-radius: 12px; background: #1C1F2E; color: #ECE6D8; padding: 0 12px; font: 16px 'DM Sans', sans-serif"><option>Dátum</option></select>
+  <label style="font-size: 13px; color: #A9A595" for="n">Stĺpec s názvom</label>
+  <select id="n" style="height: 52px; box-sizing: border-box; border: 1px solid #2E3145; border-radius: 12px; background: #1C1F2E; color: #ECE6D8; padding: 0 12px; font: 16px 'DM Sans', sans-serif"><option>Názov</option></select>
+  <label style="font-size: 13px; color: #A9A595" for="s">Stĺpec s textom snu</label>
+  <select id="s" style="height: 52px; box-sizing: border-box; border: 1px solid #2E3145; border-radius: 12px; background: #1C1F2E; color: #ECE6D8; padding: 0 12px; font: 16px 'DM Sans', sans-serif"><option>Sen</option></select>
+  <section style="margin-top: 8px; padding-top: 12px; border-top: 1px solid #2E3145">
+    <h2 style="margin: 0 0 6px; font-size: 13px; line-height: 18px; font-weight: 400; color: #A9A595">Prvý riadok</h2>
+    <div style="font-size: 13px; line-height: 18px; color: #A9A595">Piatok 12. 1. 2024</div>
+    <div style="font: 500 18px/24px Literata, serif">Most nad oblakmi</div>
+    <div style="font: 15px/22px Literata, serif; color: #A9A595">Most viedol do mesta, ktoré poznám len zo sna.</div>
+  </section>
+  <div style="flex-grow: 1"></div>
+  <a href="Import-nahlad.dc.html" style="height: 52px; border-radius: 12px; background: #E2BD7A; color: #1B1608; font-weight: 600; font-size: 16px; display: flex; align-items: center; justify-content: center; text-decoration: none">Pokračovať</a>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

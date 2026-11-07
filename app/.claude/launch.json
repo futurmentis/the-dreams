@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "aplikacia",
+      "runtimeExecutable": "npx.cmd",
+      "runtimeArgs": ["expo", "start", "--web", "--port", "19006"],
+      "port": 19006
+    }
+  ]
+}

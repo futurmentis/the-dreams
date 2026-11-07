@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<title>Štatistiky, prázdne</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#E2BD7A}a:hover{color:#ECE6D8}</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #12141F; color: #ECE6D8; font-family: 'DM Sans', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <main style="flex-grow: 1; min-height: 0; padding: 24px 20px 32px; display: flex; flex-direction: column">
+    <h1 style="margin: 0; font: 500 30px/36px Literata, serif">Štatistiky</h1>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; gap: 12px">
+      <p style="margin: 0; font: 500 22px/30px Literata, serif">Štatistiky sa ukážu po prvom zápise.</p>
+      <a href="Zapis.dc.html" style="height: 52px; margin-top: 12px; border-radius: 12px; background: #E2BD7A; color: #1B1608; font-weight: 600; font-size: 16px; display: flex; align-items: center; justify-content: center; text-decoration: none">Zapísať sen</a>
+    </div>
+  </main>
+  <nav aria-label="Hlavná navigácia" style="flex: none; height: 72px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid #2E3145; background: #12141F">
+    <a href="Sny-prazdne.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 12px; text-decoration: none; color: #A9A595"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6c-2-1.5-5-2-8-2v14c3 0 6 .5 8 2 2-1.5 5-2 8-2V4c-3 0-6 .5-8 2zM12 6v14"></path></svg>Sny</a>
+    <a href="Zapis.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 12px; text-decoration: none; color: #A9A595"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Zápis</a>
+    <a href="Statistiky-prazdne.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 12px; font-weight: 600; text-decoration: none; color: #E2BD7A"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M5 20v-7M12 20V5M19 20v-10"></path></svg>Štatistiky</a>
+    <a href="Nastavenia.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 12px; text-decoration: none; color: #A9A595"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"></path><circle cx="16" cy="7" r="2"></circle><circle cx="8" cy="17" r="2"></circle></svg>Nastavenia</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>the Dreams: dizajnové smery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --page: #ece9e3; --ink: #24211d; --muted: #625c53; --line: #d5cfc5; --box: #f7f5f0;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.5 "DM Sans", system-ui, sans-serif; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 40px 16px 72px; }
+  h1 { font: 600 34px/1.15 Fraunces, serif; margin: 0 0 8px; }
+  .lead { margin: 0 0 20px; max-width: 62ch; color: var(--muted); }
+  .why { background: var(--box); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; max-width: 72ch; margin-bottom: 48px; }
+  .why b { display: block; margin-bottom: 2px; }
+  section { margin-bottom: 64px; }
+  section > h2 { font: 600 25px/1.2 Fraunces, serif; margin: 0 0 4px; }
+  section > p { margin: 0 0 22px; max-width: 70ch; color: var(--muted); }
+  .row { display: flex; flex-wrap: wrap; gap: 28px; justify-content: flex-start; }
+  figure { margin: 0; width: min(100%, 360px); }
+  figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; text-align: center; }
+  .phone { width: 100%; height: 740px; border-radius: 32px; overflow: hidden; position: relative; border: 7px solid #17151a; display: flex; flex-direction: column; }
+  .status { height: 30px; flex: none; display: flex; align-items: center; justify-content: space-between; padding: 8px 22px 0; font-size: 12px; opacity: .75; }
+  .scroll { flex: 1; overflow: hidden; padding: 12px 20px 0; }
+  .tabs { flex: none; display: grid; grid-template-columns: 1fr 1fr 1fr; height: 62px; font-size: 13px; }
+  .tabs span { display: flex; align-items: center; justify-content: center; }
+  .eye { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+  .chip { display: inline-flex; align-items: center; min-height: 30px; padding: 0 11px; border-radius: 15px; font-size: 13px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .btn { display: flex; align-items: center; justify-content: center; height: 52px; border-radius: 14px; font-weight: 600; }
+
+  /* A */
+  .a { --bg: #12141f; --s: #1c1f2e; --t: #ece6d8; --m: #a9a595; --ac: #e2bd7a; --l: #2e3145;
+       background: var(--bg); color: var(--t); font-family: Literata, serif; }
+  .a .tabs { border-top: 1px solid var(--l); font-family: "DM Sans"; color: var(--m); }
+  .a .tabs .on { color: var(--ac); font-weight: 600; }
+  .a h3 { font: 500 30px/1.15 Literata, serif; margin: 6px 0 16px; }
+  .a .search { height: 46px; border-radius: 12px; background: var(--s); display: flex; align-items: center; padding: 0 14px; color: var(--m); font: 15px "DM Sans"; margin-bottom: 18px; }
+  .a .month { font: 500 12px "DM Sans"; letter-spacing: .1em; text-transform: uppercase; color: var(--ac); margin: 0 0 10px; }
+  .a .dream { padding: 14px 0 15px; border-top: 1px solid var(--l); }
+  .a .dream .d { font: 13px "DM Sans"; color: var(--m); }
+  .a .dream h4 { font: 500 20px/1.3 Literata, serif; margin: 2px 0 4px; }
+  .a .dream p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--m); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .a .chip { background: var(--s); color: var(--t); font-family: "DM Sans"; }
+  .a .chip.on { background: var(--ac); color: #1b1608; }
+  .a .field { font: 13px "DM Sans"; color: var(--m); margin-bottom: 5px; }
+  .a .title { font-size: 25px; font-weight: 500; padding-bottom: 12px; border-bottom: 1px solid var(--l); margin-bottom: 14px; }
+  .a .body { font-size: 18px; line-height: 1.65; min-height: 290px; }
+  .a .btn { background: var(--ac); color: #1b1608; font-family: "DM Sans"; }
+  .a .big { font-size: 60px; font-weight: 500; line-height: 1; }
+  .a .card { border-top: 1px solid var(--l); padding-top: 16px; margin-top: 20px; }
+
+  /* B */
+  .b { --bg: #f6f1e7; --s: #ebe3d3; --t: #2a2520; --m: #6a6053; --ac: #a8452e; --l: #dbd0bc;
+       background: var(--bg); color: var(--t); font-family: "DM Sans", sans-serif; }
+  .b .tabs { border-top: 1px solid var(--l); color: var(--m); }
+  .b .tabs .on { color: var(--ac); font-weight: 600; }
+  .b h3 { font: 600 34px/1.1 Fraunces, serif; margin: 4px 0 14px; }
+  .b .cal { display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; row-gap: 2px; margin-bottom: 14px; font-size: 14px; }
+  .b .cal i { font-style: normal; font-size: 12px; color: var(--m); padding-bottom: 6px; }
+  .b .cal span { height: 42px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 50%; position: relative; }
+  .b .cal .has::after { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--ac); position: absolute; bottom: 5px; }
+  .b .cal .sel { background: var(--ac); color: #fff8ee; font-weight: 600; }
+  .b .cal .sel::after { background: #fff8ee; }
+  .b .dream { background: #fffaf0; border: 1px solid var(--l); border-radius: 14px; padding: 12px 14px; margin-bottom: 9px; }
+  .b .dream .d { font-size: 13px; color: var(--m); }
+  .b .dream h4 { font: 600 18px/1.25 Fraunces, serif; margin: 1px 0 3px; }
+  .b .dream p { margin: 0; font-size: 14px; color: var(--m); display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+  .b .chip { background: var(--s); }
+  .b .chip.on { background: var(--ac); color: #fff8ee; }
+  .b .field { font-size: 13px; color: var(--m); margin-bottom: 5px; }
+  .b .title { font: 600 26px/1.2 Fraunces, serif; margin-bottom: 14px; }
+  .b .body { font: 18px/32px Fraunces, serif; min-height: 288px; background-image: repeating-linear-gradient(transparent 0 31px, var(--l) 31px 32px); }
+  .b .btn { background: var(--ac); color: #fff8ee; }
+  .b .big { font: 600 58px/1 Fraunces, serif; }
+  .b .card { background: #fffaf0; border: 1px solid var(--l); border-radius: 14px; padding: 14px; margin-top: 14px; }
+
+  /* C */
+  .c { --bg: #0a0b10; --s: #171922; --t: #f1f1ee; --m: #a3a4ab; --ac: #8fd6c6; --l: #272a36;
+       background: var(--bg); color: var(--t); font-family: Manrope, sans-serif; }
+  .c .tabs { color: var(--m); border-top: 1px solid var(--l); }
+  .c .tabs .on { color: var(--ac); font-weight: 700; }
+  .c h3 { font: 700 26px/1.15 Manrope, sans-serif; margin: 4px 0 12px; }
+  .c .sky { display: block; width: 100%; height: 300px; margin: 0 -2px 10px; }
+  .c .star-label { fill: #f1f1ee; font: 600 12px Manrope, sans-serif; }
+  .c .star-sub { fill: #a3a4ab; font: 500 11px Manrope, sans-serif; }
+  .c .dream { background: var(--s); border-radius: 16px; padding: 14px; margin-bottom: 10px; }
+  .c .dream .d { font-size: 13px; color: var(--ac); font-weight: 600; }
+  .c .dream h4 { font: 700 18px/1.3 Manrope, sans-serif; margin: 2px 0 4px; }
+  .c .dream p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--m); }
+  .c .chip { border: 1px solid var(--l); }
+  .c .chip.on { background: var(--ac); border-color: var(--ac); color: #08201b; font-weight: 600; }
+  .c .field { font-size: 13px; color: var(--m); margin-bottom: 5px; }
+  .c .title { font-size: 24px; font-weight: 700; margin-bottom: 14px; }
+  .c .body { font-size: 17px; line-height: 1.65; min-height: 290px; background: var(--s); border-radius: 16px; padding: 14px; }
+  .c .btn { background: var(--ac); color: #08201b; }
+  .c .big { font-size: 56px; font-weight: 700; line-height: 1; }
+  .c .card { background: var(--s); border-radius: 16px; padding: 14px; margin-top: 14px; }
+
+  /* shared chart bits */
+  .bars { display: flex; align-items: flex-end; gap: 6px; height: 112px; margin-top: 12px; }
+  .bars b { flex: 1; background: var(--ac); border-radius: 4px 4px 0 0; }
+  .bars b.dim { opacity: .45; }
+  .axis { display: flex; justify-content: space-between; font-size: 12px; color: var(--m); margin-top: 5px; font-family: "DM Sans"; }
+  .theme { display: grid; grid-template-columns: 84px 1fr 26px; gap: 8px; align-items: center; font-size: 14px; height: 30px; }
+  .theme i { display: block; height: 8px; background: var(--ac); border-radius: 0 4px 4px 0; }
+  .theme em { font-style: normal; text-align: right; color: var(--m); }
+  .ctitle { font-weight: 600; font-size: 15px; margin-bottom: 8px; }
+
+  .rec { background: var(--box); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; max-width: 72ch; }
+  .rec h2 { font: 600 22px Fraunces, serif; margin: 0 0 6px; }
+  .rec p { margin: 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>the Dreams: tri dizajnové smery</h1>
+  <p class="lead">Vyberáme, ako má aplikácia pôsobiť a akým spôsobom v nej budeš hľadať sny. Všetky sny na ukážkach sú vymyslené.</p>
+  <div class="why"><b>Prečo</b>Aplikáciu budeš otvárať hlavne po prebudení, keď sen rýchlo mizne. Zápis preto musí byť hneď po ruke a oči sa nesmú unaviť. Každý smer rieši hlavnú obrazovku inak.</div>
+
+  <!-- A -->
+  <section>
+    <h2>A: Nočná kniha</h2>
+    <p>Tmavý modrý podklad s teplým textom a knižným písmom. Hlavná obrazovka je súvislé čítanie snov za sebou, ako listovanie v denníku.</p>
+    <div class="row">
+      <figure>
+        <div class="phone a"><div class="status"><span>7:04</span><span>the Dreams</span></div>
+          <div class="scroll">
+            <h3>Sny</h3>
+            <div class="search">Hľadať slovo alebo dátum</div>
+            <div class="month">November 2026</div>
+            <div class="dream"><div class="d">Sobota 7. 11.</div><h4>Vlak cez jazero</h4><p>Vlak išiel po hladine a nikto sa nečudoval. Za oknami plávali kone a na stanici čakala moja stará učiteľka.</p></div>
+            <div class="dream"><div class="d">Štvrtok 5. 11.</div><h4>Škola bez konca</h4><p>Chodby boli dlhšie, než si pamätám. Na všetkých dverách bolo napísané to isté číslo.</p></div>
+            <div class="dream"><div class="d">Utorok 3. 11.</div><h4>Let nad Tatrami</h4><p>Stačilo sa odraziť a zem ostala dole. Hory boli úplne ticho.</p></div>
+          </div>
+          <div class="tabs"><span class="on">Sny</span><span>+ Zápis</span><span>Štatistiky</span></div>
+        </div>
+        <figcaption>Sny</figcaption>
+      </figure>
+      <figure>
+        <div class="phone a"><div class="status"><span>7:05</span><span>Uložené</span></div>
+          <div class="scroll">
+            <div class="field">Sobota 7. novembra 2026</div>
+            <div class="title">Vlak cez jazero</div>
+            <div class="body">Vlak išiel po hladine a nikto sa nečudoval. Za oknami plávali kone a na stanici čakala moja stará učiteľka.</div>
+            <div class="field">Témy</div>
+            <div class="chips" style="margin-bottom:16px"><span class="chip on">voda</span><span class="chip on">cesta</span><span class="chip">škola</span><span class="chip">rodina</span><span class="chip">+ nová</span></div>
+            <div class="btn">Uložiť sen</div>
+          </div>
+          <div class="tabs"><span>Sny</span><span class="on">+ Zápis</span><span>Štatistiky</span></div>
+        </div>
+        <figcaption>Zápis</figcaption>
+      </figure>
+      <figure>
+        <div class="phone a"><div class="status"><span>7:06</span><span>the Dreams</span></div>
+          <div class="scroll">
+            <h3>Štatistiky</h3>
+            <div class="big">214</div>
+            <div class="field" style="margin-top:6px">snov od januára 2024</div>
+            <div class="card"><div class="ctitle">Snov za mesiac, posledný rok</div>
+              <div class="bars"><b style="height:44%"></b><b style="height:60%"></b><b style="height:36%"></b><b style="height:52%"></b><b style="height:72%"></b><b style="height:48%"></b><b style="height:56%"></b><b style="height:88%"></b><b style="height:64%"></b><b style="height:40%"></b><b style="height:68%"></b><b class="dim" style="height:16%"></b></div>
+              <div class="axis"><span>dec</span><span>jún</span><span>nov</span></div></div>
+            <div class="card"><div class="ctitle">Najčastejšie témy</div>
+              <div class="theme"><span>voda</span><i style="width:100%"></i><em>38</em></div>
+              <div class="theme"><span>škola</span><i style="width:76%"></i><em>29</em></div>
+              <div class="theme"><span>lietanie</span><i style="width:55%"></i><em>21</em></div>
+              <div class="theme"><span>rodina</span><i style="width:47%"></i><em>18</em></div>
+            </div>
+          </div>
+          <div class="tabs"><span>Sny</span><span>+ Zápis</span><span class="on">Štatistiky</span></div>
+        </div>
+        <figcaption>Štatistiky</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- B -->
+  <section>
+    <h2>B: Ranný zošit</h2>
+    <p>Svetlý teplý papier, linajky a výrazné písmo. Hlavná obrazovka je kalendár: bodka znamená sen a dotykom na deň ho hneď nájdeš.</p>
+    <div class="row">
+      <figure>
+        <div class="phone b"><div class="status"><span>7:04</span><span>the Dreams</span></div>
+          <div class="scroll">
+            <h3>November</h3>
+            <div class="cal">
+              <i>Po</i><i>Ut</i><i>St</i><i>Št</i><i>Pi</i><i>So</i><i>Ne</i>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span class="has">1</span>
+              <span>2</span><span class="has">3</span><span>4</span><span class="has">5</span><span>6</span><span class="has sel">7</span><span>8</span>
+              <span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+              <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
+            </div>
+            <div class="dream"><div class="d">Sobota 7. 11.</div><h4>Vlak cez jazero</h4><p>Vlak išiel po hladine a nikto sa nečudoval.</p></div>
+            <div class="dream"><div class="d">Štvrtok 5. 11.</div><h4>Škola bez konca</h4><p>Chodby boli dlhšie, než si pamätám.</p></div>
+          </div>
+          <div class="tabs"><span class="on">Sny</span><span>+ Zápis</span><span>Štatistiky</span></div>
+        </div>
+        <figcaption>Sny</figcaption>
+      </figure>
+      <figure>
+        <div class="phone b"><div class="status"><span>7:05</span><span>Uložené</span></div>
+          <div class="scroll">
+            <div class="field">Sobota 7. novembra 2026</div>
+            <div class="title">Vlak cez jazero</div>
+            <div class="body">Vlak išiel po hladine a nikto sa nečudoval. Za oknami plávali kone a na stanici čakala moja stará učiteľka.</div>
+            <div class="field" style="margin-top:8px">Témy</div>
+            <div class="chips" style="margin-bottom:14px"><span class="chip on">voda</span><span class="chip on">cesta</span><span class="chip">škola</span><span class="chip">rodina</span><span class="chip">+ nová</span></div>
+            <div class="btn">Uložiť sen</div>
+          </div>
+          <div class="tabs"><span>Sny</span><span class="on">+ Zápis</span><span>Štatistiky</span></div>
+        </div>
+        <figcaption>Zápis</figcaption>
+      </figure>
+      <figure>
+        <div class="phone b"><div class="status"><span>7:06</span><span>the Dreams</span></div>
+          <div class="scroll">
+            <h3>Štatistiky</h3>
+            <div class="big">214</div>
+            <div class="field" style="margin-top:6px">snov od januára 2024</div>
+            <div class="card"><div class="ctitle">Snov za mesiac, posledný rok</div>
+              <div class="bars"><b style="height:44%"></b><b style="height:60%"></b><b style="height:36%"></b><b style="height:52%"></b><b style="height:72%"></b><b style="height:48%"></b><b style="height:56%"></b><b style="height:88%"></b><b style="height:64%"></b><b style="height:40%"></b><b style="height:68%"></b><b class="dim" style="height:16%"></b></div>
+              <div class="axis"><span>dec</span><span>jún</span><span>nov</span></div></div>
+            <div class="card"><div class="ctitle">Najčastejšie témy</div>
+              <div class="theme"><span>voda</span><i style="width:100%"></i><em>38</em></div>
+              <div class="theme"><span>škola</span><i style="width:76%"></i><em>29</em></div>
+              <div class="theme"><span>lietanie</span><i style="width:55%"></i><em>21</em></div>
+              <div class="theme"><span>rodina</span><i style="width:47%"></i><em>18</em></div>
+            </div>
+          </div>
+          <div class="tabs"><span>Sny</span><span>+ Zápis</span><span class="on">Štatistiky</span></div>
+        </div>
+        <figcaption>Štatistiky</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- C -->
+  <section>
+    <h2>C: Mapa snov</h2>
+    <p>Takmer čierne nočné nebo a moderné písmo. Každý sen je hviezda a sny s rovnakou témou sa spájajú do súhvezdí, takže témy vidíš na prvý pohľad.</p>
+    <div class="row">
+      <figure>
+        <div class="phone c"><div class="status"><span>7:04</span><span>the Dreams</span></div>
+          <div class="scroll">
+            <h3>November</h3>
+            <div class="chips"><span class="chip on">Všetky</span><span class="chip">voda</span><span class="chip">škola</span><span class="chip">lietanie</span></div>
+            <svg class="sky" viewBox="0 0 320 300" role="img" aria-label="Mapa snov: hviezdy spojené do súhvezdí podľa tém">
+              <g stroke="#8fd6c6" stroke-opacity=".45" fill="none"><path d="M46 92 L108 58 L168 104 L140 164"/><path d="M226 66 L274 118 L240 180"/><path d="M70 232 L136 250 L196 226"/></g>
+              <g fill="#f1f1ee"><circle cx="46" cy="92" r="3.5"/><circle cx="108" cy="58" r="5"/><circle cx="140" cy="164" r="3"/><circle cx="226" cy="66" r="4"/><circle cx="274" cy="118" r="3"/><circle cx="240" cy="180" r="4.5"/><circle cx="70" cy="232" r="3"/><circle cx="136" cy="250" r="3.5"/><circle cx="196" cy="226" r="3"/></g>
+              <circle cx="168" cy="104" r="11" fill="none" stroke="#8fd6c6"/><circle cx="168" cy="104" r="6" fill="#8fd6c6"/>
+              <text class="star-label" x="46" y="44">voda</text><text class="star-sub" x="46" y="28">38 snov</text>
+              <text class="star-label" x="222" y="40">škola</text><text class="star-sub" x="222" y="24">29 snov</text>
+              <text class="star-label" x="70" y="282">lietanie</text><text class="star-sub" x="134" y="282">21 snov</text>
+            </svg>
+            <div class="dream"><div class="d">Sobota 7. 11.</div><h4>Vlak cez jazero</h4><p>Vlak išiel po hladine a nikto sa nečudoval.</p></div>
+            <div class="dream"><div class="d">Štvrtok 5. 11.</div><h4>Škola bez konca</h4><p>Chodby boli dlhšie, než si pamätám.</p></div>
+          </div>
+          <div class="tabs"><span class="on">Mapa</span><span>+ Zápis</span><span>Štatistiky</span></div>
+        </div>
+        <figcaption>Sny</figcaption>
+      </figure>
+      <figure>
+        <div class="phone c"><div class="status"><span>7:05</span><span>Uložené</span></div>
+          <div class="scroll">
+            <div class="field">Sobota 7. novembra 2026</div>
+            <div class="title">Vlak cez jazero</div>
+            <div class="body">Vlak išiel po hladine a nikto sa nečudoval. Za oknami plávali kone a na stanici čakala moja stará učiteľka.</div>
+            <div class="field" style="margin-top:14px">Témy</div>
+            <div class="chips" style="margin-bottom:14px"><span class="chip on">voda</span><span class="chip on">cesta</span><span class="chip">škola</span><span class="chip">rodina</span><span class="chip">+ nová</span></div>
+            <div class="btn">Uložiť sen</div>
+          </div>
+          <div class="tabs"><span>Mapa</span><span class="on">+ Zápis</span><span>Štatistiky</span></div>
+        </div>
+        <figcaption>Zápis</figcaption>
+      </figure>
+      <figure>
+        <div class="phone c"><div class="status"><span>7:06</span><span>the Dreams</span></div>
+          <div class="scroll">
+            <h3>Štatistiky</h3>
+            <div class="big">214</div>
+            <div class="field" style="margin-top:6px">snov od januára 2024</div>
+            <div class="card"><div class="ctitle">Snov za mesiac, posledný rok</div>
+              <div class="bars"><b style="height:44%"></b><b style="height:60%"></b><b style="height:36%"></b><b style="height:52%"></b><b style="height:72%"></b><b style="height:48%"></b><b style="height:56%"></b><b style="height:88%"></b><b style="height:64%"></b><b style="height:40%"></b><b style="height:68%"></b><b class="dim" style="height:16%"></b></div>
+              <div class="axis"><span>dec</span><span>jún</span><span>nov</span></div></div>
+            <div class="card"><div class="ctitle">Najčastejšie témy</div>
+              <div class="theme"><span>voda</span><i style="width:100%"></i><em>38</em></div>
+              <div class="theme"><span>škola</span><i style="width:76%"></i><em>29</em></div>
+              <div class="theme"><span>lietanie</span><i style="width:55%"></i><em>21</em></div>
+              <div class="theme"><span>rodina</span><i style="width:47%"></i><em>18</em></div>
+            </div>
+          </div>
+          <div class="tabs"><span>Mapa</span><span>+ Zápis</span><span class="on">Štatistiky</span></div>
+        </div>
+        <figcaption>Štatistiky</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="rec">
+    <h2>Odporúčanie: A, Nočná kniha</h2>
+    <p>Tmavý podklad neoslepí oči hneď po prebudení a knižné písmo sa dobre hodí na dlhší text. Hľadanie je priamo navrchu, čo najlepšie sedí k filtrovaniu podľa slova aj dátumu. Kalendár z B sa dá pridať ako pomôcka pri výbere dátumu. Mapa z C vyzerá najzaujímavejšie, ale pri stovkách snov sa v nej ťažšie hľadá.</p>
+  </div>
+</div>
+</body>
+</html>

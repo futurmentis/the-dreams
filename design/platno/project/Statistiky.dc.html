@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<title>Štatistiky</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#E2BD7A}a:hover{color:#ECE6D8}</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #12141F; color: #ECE6D8; font-family: 'DM Sans', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <main style="flex-grow: 1; min-height: 0; overflow: hidden; padding: 24px 20px 0">
+    <h1 style="margin: 0 0 16px; font: 500 30px/36px Literata, serif">Štatistiky</h1>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 20px">
+      <div><div style="font: 500 52px/56px Literata, serif">214</div><div style="font-size: 13px; line-height: 18px; color: #A9A595">snov od januára 2024</div></div>
+      <div><div style="font: 500 52px/56px Literata, serif">6</div><div style="font-size: 13px; line-height: 18px; color: #A9A595">snov priemerne za mesiac</div></div>
+    </div>
+    <section style="border-top: 1px solid #2E3145; padding-top: 16px">
+      <h2 style="margin: 0; font-size: 15px; line-height: 22px; font-weight: 600">Snov za mesiac</h2>
+      <div role="img" aria-label="Snov za mesiac za posledný rok, najviac v júni, 14" style="display: flex; align-items: flex-end; gap: 6px; height: 112px; margin-top: 12px">
+        <sc-for list="{{ months }}" as="m" hint-placeholder-count="12"><div style="{{ m.style }}"></div></sc-for>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 12px; color: #A9A595"><span>dec 2025</span><span>nov 2026</span></div>
+    </section>
+    <section style="border-top: 1px solid #2E3145; margin-top: 20px; padding-top: 12px">
+      <h2 style="margin: 0 0 4px; font-size: 15px; line-height: 22px; font-weight: 600">Najčastejšie témy</h2>
+      <sc-for list="{{ themes }}" as="t" hint-placeholder-count="5">
+        <a href="Sny.dc.html" style="display: grid; grid-template-columns: 76px minmax(0, 1fr) 28px; gap: 8px; align-items: center; height: 44px; color: #ECE6D8; text-decoration: none; font-size: 14px"><span>{{ t.name }}</span><span style="{{ t.bar }}"></span><span style="text-align: right; color: #A9A595">{{ t.n }}</span></a>
+      </sc-for>
+    </section>
+  </main>
+  <nav aria-label="Hlavná navigácia" style="flex: none; height: 72px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid #2E3145; background: #12141F">
+    <a href="Sny.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 12px; text-decoration: none; color: #A9A595"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6c-2-1.5-5-2-8-2v14c3 0 6 .5 8 2 2-1.5 5-2 8-2V4c-3 0-6 .5-8 2zM12 6v14"></path></svg>Sny</a>
+    <a href="Zapis.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 12px; text-decoration: none; color: #A9A595"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Zápis</a>
+    <a href="Statistiky.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 12px; font-weight: 600; text-decoration: none; color: #E2BD7A"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M5 20v-7M12 20V5M19 20v-10"></path></svg>Štatistiky</a>
+    <a href="Nastavenia.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 12px; text-decoration: none; color: #A9A595"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"></path><circle cx="16" cy="7" r="2"></circle><circle cx="8" cy="17" r="2"></circle></svg>Nastavenia</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const counts = [7, 9, 6, 8, 11, 8, 14, 13, 10, 7, 12, 4];
+    const months = counts.map((c, i) => ({
+      style: 'flex: 1; height: ' + Math.round(c / 14 * 100) + '%; border-radius: 4px 4px 0 0; background: #E2BD7A; opacity: ' + (i === 11 ? '0.45' : '1')
+    }));
+    const data = [['voda', 38], ['škola', 29], ['lietanie', 21], ['rodina', 18], ['cesta', 14]];
+    const themes = data.map(([name, n]) => ({
+      name, n,
+      bar: 'display: block; height: 8px; border-radius: 0 4px 4px 0; background: #E2BD7A; width: ' + Math.round(n / 38 * 100) + '%'
+    }));
+    return { months, themes };
+  }
+}
+</script>
+</body>
+</html>

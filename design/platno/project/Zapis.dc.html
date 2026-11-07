@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<title>Zápis</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#E2BD7A}a:hover{color:#ECE6D8}input::placeholder,textarea::placeholder{color:#A9A595}</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #12141F; color: #ECE6D8; font-family: 'DM Sans', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <main style="flex-grow: 1; min-height: 0; padding: 12px 20px 16px; display: flex; flex-direction: column; gap: 10px">
+    <a href="Datum.dc.html" aria-label="Zmeniť dátum snu, teraz sobota 7. novembra 2026" style="min-height: 48px; display: flex; align-items: center; gap: 8px; font-size: 15px; color: #ECE6D8; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E2BD7A" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="4" y="5.5" width="16" height="15" rx="2"></rect><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"></path></svg>Sobota 7. novembra 2026</a>
+    <input aria-label="Názov snu" placeholder="Názov snu" style="height: 52px; box-sizing: border-box; border: 0; border-bottom: 1px solid #2E3145; background: transparent; color: #ECE6D8; font: 500 25px/32px Literata, serif">
+    <textarea aria-label="Text snu" placeholder="Čo sa ti snívalo?" style="flex-grow: 1; min-height: 0; box-sizing: border-box; border: 0; background: transparent; color: #ECE6D8; font: 18px/30px Literata, serif; padding: 6px 0; resize: none"></textarea>
+    <span id="t" style="font-size: 13px; color: #A9A595">Témy</span>
+    <div role="group" aria-labelledby="t" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 6px">
+      <button aria-pressed="true" style="height: 40px; padding: 0 14px; border: 0; border-radius: 20px; background: #E2BD7A; color: #1B1608; font: 600 14px 'DM Sans', sans-serif">✓ voda</button>
+      <button style="height: 40px; padding: 0 14px; border: 0; border-radius: 20px; background: #262A3C; color: #ECE6D8; font: 14px 'DM Sans', sans-serif">škola</button>
+      <button style="height: 40px; padding: 0 14px; border: 0; border-radius: 20px; background: #262A3C; color: #ECE6D8; font: 14px 'DM Sans', sans-serif">lietanie</button>
+      <button style="height: 40px; padding: 0 14px; border: 0; border-radius: 20px; background: #262A3C; color: #ECE6D8; font: 14px 'DM Sans', sans-serif">rodina</button>
+      <button style="height: 40px; padding: 0 14px; border: 1px dashed #A9A595; border-radius: 20px; background: transparent; color: #ECE6D8; font: 14px 'DM Sans', sans-serif">+ nová téma</button>
+    </div>
+    <a href="Detail.dc.html" style="flex: none; height: 52px; border-radius: 12px; background: #E2BD7A; color: #1B1608; font-weight: 600; font-size: 16px; display: flex; align-items: center; justify-content: center; text-decoration: none">Uložiť sen</a>
+  </main>
+  <nav aria-label="Hlavná navigácia" style="flex: none; height: 72px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid #2E3145; background: #12141F">
+    <a href="Sny.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 12px; text-decoration: none; color: #A9A595"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6c-2-1.5-5-2-8-2v14c3 0 6 .5 8 2 2-1.5 5-2 8-2V4c-3 0-6 .5-8 2zM12 6v14"></path></svg>Sny</a>
+    <a href="Zapis.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 12px; font-weight: 600; text-decoration: none; color: #E2BD7A"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Zápis</a>
+    <a href="Statistiky.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 12px; text-decoration: none; color: #A9A595"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M5 20v-7M12 20V5M19 20v-10"></path></svg>Štatistiky</a>
+    <a href="Nastavenia.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 12px; text-decoration: none; color: #A9A595"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"></path><circle cx="16" cy="7" r="2"></circle><circle cx="8" cy="17" r="2"></circle></svg>Nastavenia</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

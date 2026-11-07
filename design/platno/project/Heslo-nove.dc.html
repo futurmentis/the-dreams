@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<title>Nové heslo</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#E2BD7A}a:hover{color:#ECE6D8}input::placeholder{color:#A9A595}</style>
+</helmet>
+<main style="width: 390px; height: 844px; box-sizing: border-box; padding: 72px 20px 32px; background: #12141F; color: #ECE6D8; font-family: 'DM Sans', sans-serif; display: flex; flex-direction: column; gap: 12px">
+  <h1 style="margin: 0; font: 500 30px/36px Literata, serif">Nastav si heslo</h1>
+  <p style="margin: 0 0 16px; font-size: 15px; line-height: 22px; color: #A9A595">Heslo zamkne tvoje sny v tomto mobile. Bez neho sa k nim nikto nedostane.</p>
+  <label style="font-size: 13px; color: #A9A595" for="pw1">Nové heslo</label>
+  <input id="pw1" type="password" placeholder="Aspoň 8 znakov" style="height: 52px; box-sizing: border-box; border: 1px solid #2E3145; border-radius: 12px; background: #1C1F2E; color: #ECE6D8; padding: 0 16px; font: 16px 'DM Sans', sans-serif">
+  <label style="font-size: 13px; color: #A9A595; margin-top: 8px" for="pw2">Heslo ešte raz</label>
+  <input id="pw2" type="password" placeholder="Zopakuj heslo" style="height: 52px; box-sizing: border-box; border: 1px solid #2E3145; border-radius: 12px; background: #1C1F2E; color: #ECE6D8; padding: 0 16px; font: 16px 'DM Sans', sans-serif">
+  <div style="flex-grow: 1"></div>
+  <a href="Zachranny-kod.dc.html" style="height: 52px; border-radius: 12px; background: #E2BD7A; color: #1B1608; font-weight: 600; font-size: 16px; display: flex; align-items: center; justify-content: center; text-decoration: none">Pokračovať</a>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

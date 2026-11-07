@@ -1,0 +1,38 @@
+{
+  "v": 3,
+  "createdOnFiles": { "v": 1, "at": "2026-11-07T09:00:00Z" },
+  "title": "the Dreams návrhy",
+  "launch": { "view": "canvas" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": { "x": 0, "y": 0, "w": 390, "h": 844, "title": "Zámok", "is_interactive": true },
+    "Zamok-chyba.dc.html": { "x": 470, "y": 0, "w": 390, "h": 844, "title": "Zámok, chyba", "is_interactive": true },
+    "Heslo-nove.dc.html": { "x": 940, "y": 0, "w": 390, "h": 844, "title": "Nové heslo", "is_interactive": true },
+    "Zachranny-kod.dc.html": { "x": 1410, "y": 0, "w": 390, "h": 844, "title": "Záchranný kód", "is_interactive": true },
+    "Obnova-hesla.dc.html": { "x": 1880, "y": 0, "w": 390, "h": 844, "title": "Obnova hesla", "is_interactive": true },
+    "Sny.dc.html": { "x": 0, "y": 1264, "w": 390, "h": 844, "title": "Sny", "is_interactive": true },
+    "Sny-prazdne.dc.html": { "x": 470, "y": 1264, "w": 390, "h": 844, "title": "Sny, prázdne", "is_interactive": true },
+    "Filter.dc.html": { "x": 940, "y": 1264, "w": 390, "h": 844, "title": "Filter", "is_interactive": true },
+    "Bez-vysledkov.dc.html": { "x": 1410, "y": 1264, "w": 390, "h": 844, "title": "Bez výsledkov", "is_interactive": true },
+    "Detail.dc.html": { "x": 1880, "y": 1264, "w": 390, "h": 844, "title": "Detail snu", "is_interactive": true },
+    "Zmazat.dc.html": { "x": 2350, "y": 1264, "w": 390, "h": 844, "title": "Zmazať sen", "is_interactive": true },
+    "Zapis.dc.html": { "x": 0, "y": 2528, "w": 390, "h": 844, "title": "Zápis", "is_interactive": true },
+    "Datum.dc.html": { "x": 470, "y": 2528, "w": 390, "h": 844, "title": "Výber dátumu", "is_interactive": true },
+    "Statistiky.dc.html": { "x": 940, "y": 2528, "w": 390, "h": 844, "title": "Štatistiky", "is_interactive": true },
+    "Statistiky-prazdne.dc.html": { "x": 1410, "y": 2528, "w": 390, "h": 844, "title": "Štatistiky, prázdne", "is_interactive": true },
+    "Nastavenia.dc.html": { "x": 0, "y": 3792, "w": 390, "h": 844, "title": "Nastavenia", "is_interactive": true },
+    "Export-md.dc.html": { "x": 470, "y": 3792, "w": 390, "h": 844, "title": "Export do MD", "is_interactive": true },
+    "Presun.dc.html": { "x": 940, "y": 3792, "w": 390, "h": 844, "title": "Presun do mobilu", "is_interactive": true },
+    "Import-nahlad.dc.html": { "x": 1410, "y": 3792, "w": 390, "h": 844, "title": "Kontrola importu", "is_interactive": true },
+    "Import-excel.dc.html": { "x": 1880, "y": 3792, "w": 390, "h": 844, "title": "Import z Excelu", "is_interactive": true },
+    "Hromadne-temy.dc.html": { "x": 2350, "y": 3792, "w": 390, "h": 844, "title": "Hromadné témy", "is_interactive": true }
+  },
+  "order": ["Main.dc.html", "Zamok-chyba.dc.html", "Heslo-nove.dc.html", "Zachranny-kod.dc.html", "Obnova-hesla.dc.html", "Sny.dc.html", "Sny-prazdne.dc.html", "Filter.dc.html", "Bez-vysledkov.dc.html", "Detail.dc.html", "Zmazat.dc.html", "Zapis.dc.html", "Datum.dc.html", "Statistiky.dc.html", "Statistiky-prazdne.dc.html", "Nastavenia.dc.html", "Export-md.dc.html", "Presun.dc.html", "Import-nahlad.dc.html", "Import-excel.dc.html", "Hromadne-temy.dc.html"],
+  "notes": {
+    "t1": { "x": 0, "y": -300, "text": "Prístup", "kind": "title1", "maxW": 2270 },
+    "t2": { "x": 0, "y": 964, "text": "Sny", "kind": "title1", "maxW": 2740 },
+    "t3": { "x": 0, "y": 2228, "text": "Zápis a štatistiky", "kind": "title1", "maxW": 1800 },
+    "t4": { "x": 0, "y": 3492, "text": "Nastavenia a dáta", "kind": "title1", "maxW": 2740 }
+  },
+  "designSystems": []
+}

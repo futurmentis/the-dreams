@@ -1,0 +1,6 @@
+output/apk/
+.env*
+node_modules/
+output/*.json
+output/*.apk
+backup/*.bundle

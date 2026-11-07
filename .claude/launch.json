@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "navrhy",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["design/nahlad-server.mjs", ".", "19010"],
+      "port": 19010
+    },
+    {
+      "name": "aplikacia",
+      "runtimeExecutable": "npx.cmd",
+      "runtimeArgs": ["expo", "start", "--web", "--port", "19006"],
+      "cwd": "app",
+      "port": 19006
+    }
+  ]
+}
